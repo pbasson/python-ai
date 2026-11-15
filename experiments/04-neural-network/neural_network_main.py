@@ -2,7 +2,7 @@
 import torch
 
 EPOCHS, LEARNING, SEED = 500, 0.01, 42
-START, TARGET = 3.0, 12.0
+START, TARGET = 50.0, 1250.0
 
 
 class NeuralNetwork(torch.nn.Module):

@@ -1,6 +1,7 @@
 
 import torch
 
+START, END, TARGET = 3.0, 2.0, 12.0
 
 def multiplication(a: torch.Tensor, b: torch.Tensor) -> torch.Tensor:
     return a * b
@@ -14,9 +15,9 @@ def print_export(x: torch.Tensor, y: torch.Tensor, z: torch.Tensor) -> torch.ten
     print("Weight gradient:", z.grad.item())
 
 def main() -> None:
-    x = torch.tensor(3.0)
-    w = torch.tensor(2.0, requires_grad=True)
-    target = torch.tensor(12.0)
+    x = torch.tensor(START)
+    w = torch.tensor(END, requires_grad=True)
+    target = torch.tensor(TARGET)
 
     # Forward pass
     prediction = multiplication(w, x)

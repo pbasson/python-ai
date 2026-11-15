@@ -7,7 +7,7 @@ def addition(x, y):
 def multiplication(x, y):
     return x * y
 
-def printResult(x: torch.tensor ):
+def print_export(x: torch.tensor ):
     print("Shape:", x.shape)
     print("Dimensions:", x.ndim)
     print("Data type:", x.dtype)
@@ -25,7 +25,7 @@ def main() -> None:
     print("Multiplication:", multiplication_result)
 
     # Examine tensor properties
-    printResult(a)
+    print_export(a)
 
 
 if __name__ == "__main__":
